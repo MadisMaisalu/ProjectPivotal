@@ -88,6 +88,19 @@ const noomservice = data.noomservice;
         export var childUpdatesContent;
 
 
-
-
-
+export async function postUpdates(type, contenttext, user) {
+    request = await axios.post('http://'+noomservice.server+':'+noomservice.port+'/api/?act=query&qid='+noomservice.verdoc_ver_updates_qid+'&qop.insert&attrib=opinfo&accesstoken='+localStorage.getItem('accesstoken'), {
+        data: [
+            {
+                updatetype: type,
+                content: contenttext,
+                usercommit: user
+            }
+        ]
+    })
+        .then((response) => console.log(response))
+        .catch(function () {
+            request = false;
+        });
+}
+export var request;

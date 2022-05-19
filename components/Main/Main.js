@@ -141,10 +141,62 @@ export async function displayKeywordContent(id) {
     }
 }
 
+async function addContent() {
+    let message = document.getElementById('successMessage');
+    let messageText = document.querySelector('#successMessage > p');
+
+    let radiobtn = document.getElementsByName('contentChoice');
+    let choice;
+    let contentText;
+    let editorName;
+
+    if (radiobtn[0].checked) {
+        choice = 'UUENDUS';
+    } else if (radiobtn[1].checked) {
+        choice = 'KOMMENTAAR';
+    } else if (radiobtn[2].checked) {
+        choice = 'NÄIDE'
+    }
+    console.log(choice);
+
+    contentText = document.getElementById('addContentText').value;
+    editorName = document.getElementById('addContentEditor').value;
+
+    console.log(contentText);
+    console.log(editorName);
+
+    if ((contentText.length > 0) && (editorName.length > 0) && (choice !== undefined)) {
+        await postUpdates(choice, contentText, editorName);
+    } else {
+        console.log('fail');
+    }
+
+    if (message.style.visibility === 'hidden') {
+        message.style.visibility = 'visible';
+        if (request === false) {
+            message.style.backgroundColor = 'red';
+            messageText.textContent = 'Sisestamine ei õnnestunud!';
+        } else if (request !== false) {
+            message.style.backgroundColor = 'green';
+            messageText.textContent = 'Sisestamine õnnestus!';
+        }
+        setTimeout(() => {
+            message.style.visibility = 'hidden';
+            messageText.textContent = '';
+        }, 2000);
+    }
+}
+
 
 
 export default class Main extends React.Component {
 
+
+    componentDidMount() {
+        document.querySelector('#addContent > form').onsubmit = function() {
+            return false;
+        }
+    }
 
 
     render() {
