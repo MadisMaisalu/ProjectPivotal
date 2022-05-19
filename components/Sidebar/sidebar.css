@@ -1,0 +1,197 @@
+
+/* ///// Visible and Hidden meant for sidebar only ///////*/
+.visible {
+    height: 100vh;
+    min-width: 350px;
+    width: 20%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hidden {
+    width: 0;
+    min-width: 0;
+}
+
+#sidebar {
+    padding-top: 1%;;
+}
+
+#sidebar,
+#settingsMenu,
+#helpMenu {
+    background-color: #FFC72C;
+}
+
+#sidebar {
+    box-shadow: 0.1vw 0 0.5vw rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+
+.buttonClass {
+
+    width: 2%;
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+
+#search {
+
+    width: 70%;
+    position: relative;
+    text-decoration: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+#search:focus {
+    outline: none;
+}
+
+#sidebarHeader {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    height: 5%;
+    width: 90%;
+    justify-content: space-between;
+}
+
+#sidebarHeader > button {
+    min-height: 0;
+}
+
+#keywordsAndVersions {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+    height: 5%;
+    z-index: 2;
+}
+
+#keywordsAndVersions > a {
+    position: relative;
+    margin-top: 4%;
+    font-size: 1.8rem;
+    text-decoration: none;
+
+}
+
+#home {
+    border-bottom: 2px solid #6B6B6C;
+    color: #6B6B6C;
+}
+
+#home:hover {
+    color: #9a9a9a;
+    border-bottom: 2px solid #9a9a9a;
+}
+#versions:hover {
+    color: #9a9a9a;
+}
+
+#bottomButtons {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-around;
+    z-index: 2;
+    height: 5%;
+}
+#bottomButtons > button,
+#keywordsAndVersions > button {
+    box-shadow: none;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+}
+
+#Help,
+#Settings,
+#home,
+#versions {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: rgb(41,39,40);
+    font-family: Simplon-Light;
+    position: relative;
+    height: 100%;
+    border-radius: 0;
+
+}
+
+#Help:hover,
+#Settings:hover,
+#home:hover,
+#versions:hover {
+    color: white;
+    box-shadow: 0.1vw 0 0.5vw rgba(0,0,0,0.5);
+    font-family: Simplon-Bold;
+}
+
+@-webkit-keyframes helpturn {
+    0% {
+        -webkit-transform: rotateY(0deg);
+    }
+    50% {
+        -webkit-transform: rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: rotateY(0deg);
+    }
+}
+@keyframes helpturn {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+#settingsMenu,
+#helpMenu {
+    position: absolute;
+    z-index: 100;
+    height: 100vh;
+    min-width: 350px;
+    width: 20%;
+}
+
+#helpContent,
+#settingsContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#helpContent > h4,
+#settingsContent > h4 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.slider::-webkit-slider-runnable-track,
+.slider::-moz-range-track {
+    /*animate: 0.2s;*/
+    height: 200px;
+}
+
+.sliderBox {
+    margin: 10% auto;
+}
+
