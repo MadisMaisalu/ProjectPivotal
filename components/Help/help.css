@@ -1,0 +1,8 @@
+#helpContent {
+    width: 80%;
+}
+
+#helpContent > p {
+    margin: 0 auto 5%;
+    text-align: center;
+}
