@@ -1,0 +1,128 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.general {
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+
+/* DARK MODE CONFIG */
+
+.general.dark > #main,
+.general.dark > #main > h1
+ {
+  background-color: #2b2b2b;
+  color: #c9c9c9;
+}
+
+.general.dark > #main > #colorMode {
+  background-image: url("../../resources/colorSchemeLogos/moon2.svg");
+}
+
+.general.dark > #main > .mainBody > #content > p {
+  background-color: #373737;
+
+}
+
+.general.dark > #main > .mainBody > #examples > div > .exampleTitle:hover,
+.general.dark > #main > .mainBody > #updates > div > .exampleTitle:hover {
+  background-color: #494949;
+}
+
+.general.dark > #main > .mainBody > #examples > div > .exampleTitle,
+.general.dark > #main > .mainBody > #examples > div > .exampleTitle:active,
+.general.dark > #main > .mainBody > #updates > div > .exampleTitle,
+.general.dark > #main > .mainBody > #updates > div > .exampleTitle:active {
+  background-color: #373737;
+}
+
+.general.dark > #main > .mainBody > #updates > div > .exampleContent,
+.general.dark > #main > .mainBody > #examples > div > .exampleContent,
+.general.dark > #main > .mainBody > #addContent {
+  background-color: #282828;
+}
+
+
+
+.general.dark > #sidebar {
+  background-color: #3c3f41;
+  border-right: 1px solid #565656;
+}
+
+.general.dark > #sidebar > #sidebarHeader > input,
+.general.dark > #main > .mainBody > #addContent > form > textarea,
+.general.dark > #main > .mainBody > #addContent > form > input {
+  background-color: #45494a;
+  color: #c9c9c9;
+  border: none;
+
+}
+
+.general.dark > #sidebar > #keywordsAndVersions {
+  background-color: #3c3f41;
+
+}
+
+.general.dark > #sidebar > #keywordsAndVersions > button,
+.general.dark > #sidebar > #bottomButtons > button
+{
+  color: #c9c9c9;
+
+}
+
+.general.dark > #sidebar > #keywords {
+  background-color: #36393b;
+  scrollbar-color: #4e5154 #353739;
+  scrollbar-width: thin;
+}
+
+.general.dark > #sidebar > #keywords::-webkit-scrollbar-track,
+.general.dark > #sidebar > #keywords::-webkit-scrollbar-corner {
+  background-color: #353739;
+
+}
+.general.dark > #sidebar > #keywords::-webkit-scrollbar-thumb {
+  background-color: #4e5154;
+
+}
+
+.general.dark > #sidebar > #keywords > p {
+  color: #c9c9c9;
+}
+
+.general.dark > #sidebar > #keywords > .preloaderUnit > p {
+  color: #c9c9c9;
+}
+
+.general.dark > #sidebar > #keywords > .activeKeyword {
+  background-color: #0D293E;
+  cursor: default;
+}
+
+.general.dark > #sidebar > #keywords > .SYSCONF {
+  color: red;
+}
+
+.general.dark > #sidebar > #keywords > .SYSSCR {
+  color: #d4e04f;
+}
+
+.general.dark > #sidebar > #keywords > p:hover,
+.general.dark > #sidebar > #keywords > .activeKeyword:hover,
+.general.dark > #sidebar > #keywords > p:active {
+  background-color: #4b6eaf;
+  color: #e0e0e0;
+}
+
+.general.dark > #sidebar > #helpMenu,
+.general.dark > #sidebar > #settingsMenu {
+  background-color: #3c3f41;
+  color: #e0e0e0;
+}
